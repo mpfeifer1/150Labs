@@ -1,0 +1,18 @@
+This is one of my favorite pieces of code.
+
+I walked in to lab, with one goal in mind. Get out as fast as I could.
+During the first 5 minutes TA tells us that this will be a very long
+assignment. He told us it's OK if we take it back to work on outside of
+class, and bring it to him the next week. Most of the students were afraid
+they'd have to spend almost ten hours on it. He finally hands us the spec
+sheet. It was one page, front and back. I started writing code as fast as I could. After 20 minutes, I was done. I call over the TA, and I hear all
+the other students whispering, "There's no way he has everything right". After
+a minute, he says, "yep, looks good". All the other student's minds are blown.
+They're all looking at me with their eyes and jaws wide open. The TA asks me,
+"how long have you been programming?", I replied, "oh, only about two years".
+Then he asks, "How much have you used c++?". I replied, "never.". I say,
+"Bye, guys". and start leaving. All the other students were still murmuring,
+and as I'm leaving some of them laugh, some are like "how??", and I heard one
+guy go "what the HELL?!"
+
+Now everyone either wants my help or hates me :)
