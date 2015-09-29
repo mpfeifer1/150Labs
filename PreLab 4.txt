@@ -1,0 +1,175 @@
+Conditional Expressions
+a. true
+b. false
+c. true
+d. true
+e. true
+f. true
+g. false
+h. false
+i. true
+j. true
+k. false
+l. error - well technically true, but probably not what the programmer origonally intended
+m. true
+n. false
+o. false
+p. false
+
+Basic If/Else Statements
+1. The number is less than 100
+2. Nothing is printed
+3. The number is greater than 100
+4. The number is greater than 100
+5. The number is less than 100
+
+b. You could add an if statement, "if(num1 == 100)" to handle it
+c. if(num1 % 2 == 0) {
+       cout << "even";
+   }
+   if(num1 % 2 == 1) {
+       cout << "odd";
+   }
+d. if(num1 % 2 == 0) {
+       cout << "even";
+   }
+   else {
+       cout << "odd";
+   }
+e.
+if(income <= 8025) {
+    tax = (income * .1);
+}
+else if(income <= 32,550) {
+    tax = (income * .15) + 802.5;
+}
+else if(income <= 78850) {
+    tax = (income * .25) + 4481.25;
+}
+else if(income <= 164550) {
+    tax = (income * .28) + 16056.25;
+}
+else if(income <= 357700) {
+    tax = (income * .33) + 40052.25;
+}
+else {
+    tax = (income * .35) + 103791.75);
+}
+
+Logical Operators
+1. false
+2. true
+3. false
+4. true
+5. false
+
+b. if(num1 >= 10 && num1 <= 100) {
+       // Is in range
+   }
+   if(num1 <= 10 || num1 >= 100) {
+       // Is not in range
+   }
+c. if(num1 >= 100 && num2 >= 100)
+
+Nested If Statement
+1. The number is less than 10
+2. The number is between 10 and 100
+3. The number is between 10 and 100
+4. The number is greater than 100
+
+The program would function the same without curly brackets - though I wouldn't reccomend it.
+
+switch(choice) {
+    case 'A':
+        cout << "You're a good student!";
+        break;
+    case 'N':
+        cout << "Well, at least you show up";
+        break;
+    case 'S':
+        cout << "You won't learn that way.";
+        break;
+    default:
+        cout << "Invalid choice
+        break;
+}
+
+Textbook Section 7.4
+
+#include <iostream>
+using namespace std;
+int main() {
+    cout << "Student Grade Program" << endl << "   - Main Menu -" << endl$
+    cout << "1. Enter name" << endl << "2. Enter test scores" << endl << $
+    cout << "Please enter your choice from the list above: ";
+    int choice = 0;
+    cin >> choice;
+    switch(choice) {
+        case 1:
+            cout << "Entered 1" << endl;
+            break;
+        case 2:
+            cout << "Entered 2" << endl;
+            break;
+        case 3:
+            cout << "Entered 3" << endl;
+            break;
+        case 9:
+            cout << "Exited" << endl;
+            break;
+        default:
+            cout << "Entered invalid option" << endl;
+            break;
+    }
+}
+
+#include <iostream>
+using namespace std;
+int main() {
+    cout << "Enter octane rating: ";
+    int choice = 0;
+    cin >> choice;
+    switch(choice) {
+        case 87:
+            cout << "Regular Unleaded" << endl;
+            break;
+        case 89:
+            cout << "Unleaded Plus" << endl;
+            break;
+        case 92:
+            cout << "Premium" << endl;
+            break;
+        default:
+            cout << "Type: Diesil" << endl;
+            break;
+    }
+}
+
+
+
+
+Math Functions
+1. 8
+2. 2
+3. 1
+4. 2
+5. 5
+
+Golf Ball Program
+
+#include <iostream>
+#include <cmath>
+#define _USE_MATH_DEFINES
+using namespace std;
+int main() {
+    int speed = 0;
+    int angle = 0;
+    double distance = 0;
+    cout << "Enter speed (feet per second): ";
+    cin >> speed;
+    cout << "Enter angle (degrees): ";
+    cin >> angle;
+
+    distance = ((1.0 / 32.0) * pow(speed, 2) * sin((2.0 * angle) * (M_PI $
+    cout << "Distance is: " << distance << " feet" << endl;
+}

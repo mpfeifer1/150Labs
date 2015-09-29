@@ -1,0 +1,110 @@
+A. The while loop needs brackets. Without them, it will keep outputting I (1) forever
+B. There's a semicolon after while. This will be an infinite loop that does nothing
+C. I will keep getting larger, so the condition will always be true, thus an infinite loop
+D. J will always be negative, so one will always be true, and an infinite loop
+
+A. Nothing
+B. 1 + 2 + 3 + 4 + 5 +  = 16
+C. 12345
+D. 6420-2
+
+int i = 1;
+do {
+    cout << pow(3, i) << " ";
+    i++;
+} while(i <= 7);
+
+int i = 1;
+while(i <= 7) {
+    cout << pow(3, i) << " ";
+    i++;
+}
+
+for(int i = 1; i <= 7; i++) {
+    cout << pow(3, i) << " ";
+}
+
+*---*
+-*-*-
+--*--
+-*-*-
+*---*
+
+Pre-Test:
+For, While
+
+Post-Test:
+Do While
+
+Textbook Section 8.4 (P. 218-219)
+1. For loops use semicolons, not commas
+2. There shouldn't be a semicolon directly after the for, and pre-incrementing is generally a little bit more confusing
+3. You need to increment count
+4. This loop will always be less than 15, so it'll loop forever
+5. No. That's just awful. Please just use while(true) if your code's that bad
+6. for(i = 0, j = 10; i < 0; i++, j--) {
+       cout << i << " " << j << endl;
+   }
+7. 0 01 012 0123 01234
+
+Textbook Section 8.4, #1 (P. 219)
+1. for(int i = 4; i > 0; i--) {
+       for(int count = i; count > 0; count--) {
+           cout << "*";
+       }
+       cout << endl;
+   }
+
+Income Tax Program
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    bool quit = false;
+    do {
+
+    cout << fixed;
+    cout << setprecision(2);
+
+    double balance;
+    double rate;
+    int yearsToCalculate;
+
+    cout << "What is the initial investment? ";
+    cin >> balance;
+
+    cout << "What is your interest rate? ";
+    cin >> rate;
+
+    cout << "How many years to calculate? ";
+    cin >> yearsToCalculate;
+
+    cout << "Year  Prev Balance  Interest  Tax    New Balance" << endl;
+    for(int i = 1; i <= yearsToCalculate; i++) {
+        double interest = (rate / 100) * balance;
+        double tax = (interest / 10);
+        double newBalance = balance + interest - tax;
+        cout << "   " << i;
+        cout << "       " << balance;
+        cout << "   " << interest;
+        cout << "    " << tax;
+        cout << "    " << newBalance;
+
+        balance = newBalance;
+
+        cout << endl;
+    }
+
+    cout << "Do another calculation? ";
+    char input;
+    cin >> input;
+
+    if(input != 'y' && input != 'Y') {
+        quit = true;
+    }
+
+    } while(!quit);
+}
