@@ -1,0 +1,124 @@
+1.
+
+10.2
+    1. name
+    2. 5
+    3. 1
+    4. false
+       true
+       true
+    5. C
+
+10.3
+    1. A
+    2. A
+    3. C
+    4. A
+    5. D
+    6. Valid
+       Valid
+       Invalid
+       Valid
+    7. True
+       False
+       True
+       True
+
+10.4
+    1. C
+    2. for(int i = 0; i < 5; i++) {
+           sum += numA[i];
+       }
+       average = sum / 5;
+    3. B
+    4. A
+    5. D
+    6. int daysInMonth[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
+
+10.6
+    1. A
+    2. C
+    3. C
+    4. True
+       False
+       True
+    5. It passes the value of the array by reference to the function
+    6. void Sample(int ages[]);
+    7. It makes it so that the program can't change it later
+
+2.
+    0 1 2 3 4 5 6 7 8 9
+3. 
+    Compiler Error
+4.
+    0 1 2 3 4 5 6 7 8 9
+5. 
+    Compiler Error
+6. 
+    0 1 2 3 4 0 0 0 0 0
+7. 
+    You'll get the address of the array. Ten times. Way to go...
+8.
+    0 1 2 3 4 5 6 7 8 9 (3 random numbers)
+     k = 55
+9. 
+    0 20 40 60 80 100 120 140 160 180 (4 more random numbers)
+10. 
+    change "your_array = my_array;" to 
+    for(i = 0; i < 10; i++) {
+        yourArray[i] = myArray[i];
+    }
+
+11.
+    2 3 4 5 6
+    reference
+    Nothing
+12.
+    12345
+    value
+    nothing
+
+    17345
+    reference
+    Compiler error
+13.
+#include <iostream>
+using namespace std;
+
+int fill_array(int array[], int size);
+int find_largest(int array[], int size);
+
+int main() {
+    int   j;
+    int   index;
+    const int size = 10;
+    int   my_array[size];
+    int   num_elements = 0;
+
+    num_elements = fill_array(my_array, size);
+
+    index = find_largest(my_array, size);
+    cout << "The largest is:  " << my_array[index] << endl;
+
+    return 0;
+}
+
+//fills array till full or user enters ctrl-z, whichever comes first
+int fill_array(int array[], int size) {
+    for(int i = 0; i < size; i++) {
+        cout << "Enter a value: ";
+        cin >> array[i];
+    }
+    return 1;
+}
+
+//see next page for find_largest( )
+int find_largest(int array[], int size) {
+    int max = 0;
+    for(int i = 0; i < size; i++) {
+        if(array[i] > max) {
+            max = i;
+        }
+    }
+    return max;
+}
