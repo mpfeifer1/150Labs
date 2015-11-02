@@ -1,0 +1,75 @@
+A. 5
+B. 0
+C. 6
+D. Hello
+E. (Syntax Error)
+F. Hello
+G. World!
+H. String 2
+I. Hel
+J. Helld!
+K. Str
+L. HelloWorld
+M. World!Hello
+N. String 2
+O. HelloWor
+P. World!He
+Q. World!String 
+R. -1
+S. 1
+T. 0
+U. -1
+V. 0
+W. -1
+X. 0
+Y. 0
+Z. 0
+AA. WORLD!
+BB. world!
+
+a. hello
+b. thisisaver (str1 can't be longer than 10 characters)
+c. hi
+
+FirstThis is a test
+    You are adding the string to the end of the other
+
+#define _CRT_SECURE_NO_DEPRECATE
+#define _CRT_NONSTDC_NO_DEPRECATE
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+void build_big_string(char str3[], int size, char str1[], char str2[]);
+
+int main()
+{
+    char str1[25] = "";
+    char str2[25] = "";
+    char str3[40] = "";  //note this is not twice the size of str1 or str2
+
+    cout << "Enter your first phrase (24 or fewer characters: ";
+    cin.clear();
+    cin.getline(str1, 25);
+
+    cout << "Enter your second phrase (24 or fewer characters: ";
+    cin.clear();
+    cin.getline(str2, 25);
+
+    build_big_string( str3,40, str1, str2 ); //note order of arguments
+
+    cout << endl << endl;
+
+    cout << "String1: " << str1 << endl;
+    cout << "String2: " << str2 << endl;
+    cout << "Combined string: " << str3 << endl;
+
+    return 0;
+}
+
+void build_big_string(char str3[], int size, char str1[], char str2[]) {
+    strncat(str3, str1, 25);
+    strcat(str3, " ");
+    strncat(str3, str2, size - strlen(str1) - 1);
+    str3[size - 1] = '\0';
+}
