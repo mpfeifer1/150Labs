@@ -1,0 +1,76 @@
+1.  1.  a.  F
+        b.  T
+        c.  T
+        d.  F
+    2.  a
+    3.  b
+    4.  char 1_name[10][12] = {'\0'}
+    5.  int sales[30] = {0};
+    6.  210
+    7.  char names[10][15] = {"Sue","Marie"};
+    8.  cout << names[0] << " " << names[1] << endl;
+    9.  int scores[3][25];
+    10. scores[0][1] = 91;
+        scores[2][3] = 88;
+    11. a.  i.  for(int i = 0; i < 20; i++) {
+                    total_sisters += sibilings[0][i];
+                } 
+            ii. for(int i = 0; i < 20; i++) {
+                    ind_sibilings_total[i] = sibilings[0][i] + sibilings[1][i];
+                }
+        b.  foo(sibilings);
+        c.  void foo(int sibilings[]);
+
+2.  j
+    d
+
+3.  0   1   2
+    1   2   3
+    2   3   4
+
+4.  int twos[4][6] = {'\0'};
+    int current = 1;
+    for(int i = 0; i < 4; i++) {
+        for(int j = 0; j < 6; j++) {
+            twos[i][j] = current;
+            current *= 2;
+        }
+    }
+
+5.  void find_max(int array[5][6][7], int& x, int& y, int& z) {
+        int max = 0;
+        for(int i = 0; i < 5; i++) {
+            for(int j = 0; j < 6; j++) {
+                for(int k = 0; k < 7; k++) {
+                    if(array[i][j][k] > max) {
+                        max = array[i][j][k];
+                        x = i;
+                        y = j;
+                        z = k;
+                    }
+                }
+            }
+        }
+    }
+
+6.  1.  c
+    2.  c
+    3.  a.  T
+        b.  F
+        c.  T
+        d.  T
+        e.  F
+
+7.  a.  F
+    b.  T
+    c.  T
+    d.  F
+    e.  T
+    f.  T
+    g.  T
+    h.  T
+    i.  T
+    j.  T
+    k.  T
+
+10.
