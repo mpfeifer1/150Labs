@@ -1,0 +1,9 @@
+Highest cadmium reading on Sunday was 0.052 at 12pm
+Highest cadmium reading on Monday was 0.065 at 6pm
+Highest cadmium reading on Tuesday was 0.053 at 12am
+Highest cadmium reading on Wednesday was 0.061 at 6pm
+Highest cadmium reading on Thursday was 0.051 at 6am
+Highest cadmium reading on Friday was 0.052 at 12am
+Highest cadmium reading on Saturday was 0.048 at 12pm
+
+The overall highest reading was on Monday at 6pm
