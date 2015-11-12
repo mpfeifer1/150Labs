@@ -33,6 +33,7 @@ const char TIMES[4][10]     = { "12am", "6am", "12pm", "6pm" };
 int high_reading(double day[4]);
 bool read_data(ifstream& fin, double readings[7][4]);
 void write_summary(int heights[7], double readings[7][4]);
+void highestReading(int& i, int& j, double readings[7][4]);
 
 int main( )
 {
@@ -77,6 +78,22 @@ int high_reading(double day[4]) {
     return index;
 }
 
+void highestReading(int& i, int& j, double readings[7][4]) {
+    double max = 0;
+    int indexI = 0, indexJ = 0;
+    for(i = 0; i < 7; i++) {
+        for(j = 0; j < 4; j++) {
+            if(readings[i][j] > max) {
+                indexI = i;
+                indexJ = j;
+                max = readings[i][j];
+            }
+        }
+    }
+    i = indexI;
+    j = indexJ;
+}
+
 void write_summary(int heights[7], double readings[7][4]) {
     ofstream fout;
     fout.open("summary.txt");
@@ -89,16 +106,7 @@ void write_summary(int heights[7], double readings[7][4]) {
 
     fout << endl;
 
-    double max = 0;
-    int i = 0, j = 0, indexI = 0, indexJ = 0;
-    for(i = 0; i < 7; i++) {
-        for(j = 0; j < 4; j++) {
-            if(readings[i][j] > max) {
-                indexI = i;
-                indexJ = j;
-                max = readings[i][j];
-            }
-        }
-    }
-    fout << "The overall highest reading was on " << DAY_NAMES[indexI] << " at " << TIMES[indexJ] << endl;
+    int i = 0, j = 0;
+    highestReading(i, j, readings);
+    fout << "The overall highest reading was on " << DAY_NAMES[i] << " at " << TIMES[j] << endl;
 }
