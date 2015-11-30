@@ -1,0 +1,51 @@
+// Linear Search
+for(int i = 0; i < size; i++) {
+    if(list[i] == key) {
+        return i;
+    }
+    return -1;
+}
+
+// Binary Search
+3  5  6  8 11 14 15 16 20 22 27 31 33
+0  1  2  3  4  5  6  7  8  9 10 11 12
+L                 M                 R
+L        M        R
+L  M     R
+   L  M  R
+      LM R
+      LR
+
+// Bubble Sort
+8  12  5  10  4
+8  5  12  10  4
+8  5  10  12  4
+8  5  10  4  12
+5  8  10  4  12
+5  8  4  10  12
+5  4  8  10  12
+4  5  8  10  12
+
+// Selection Sort
+8  12  5  10  4
+4  12  5  10  8
+4  5  12  10  8
+4  5  8  10  12
+
+// Swap 2
+void swapDoubles(double& d1, double& d2) {
+    double temp = d1;
+    d1 = d2;
+    d2 = temp;
+}
+
+// Sort doubles
+void bubbleSort(double arr[], int size) {
+    for(int i = 0; i < size; i++) {
+        for(int j = 0; j < size - 1; j++) {
+            if(arr[j] > arr[j+1]) {
+                swapDoubles(arr[j], arr[j+1]);
+            }
+        }
+    }
+}
